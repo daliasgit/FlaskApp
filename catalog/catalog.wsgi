@@ -4,5 +4,5 @@ import logging
 logging.basicConfig(stream=sys.stderr)
 sys.path.insert(0,"/var/www/FlaskApp/catalog/")
 
-from project.py import app as application
+from __init__.py import app as application
 application.secret_key = 'super_secret_key' 
