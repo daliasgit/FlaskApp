@@ -16,9 +16,8 @@ import requests
 
 app = Flask(__name__)
 
-CLIENT_ID = json.loads(
-    open('/var/www/FlaskApp/catalog/client_secrets.json', 'r').read())['web']['client_id']
-APPLICATION_NAME = "Restaurant Menu Application"
+with app.open_resource('client_secrets.json') as f:    
+    CLIENT_ID = json.load(f)['web']['client_id']
 
 
 # Connect to Database and create database session
