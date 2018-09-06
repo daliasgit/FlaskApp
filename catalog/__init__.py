@@ -16,8 +16,9 @@ import requests
 
 app = Flask(__name__)
 
+APP_PATH = '/var/www/FlaskApp/catalog/'
 CLIENT_ID = json.loads(
-    open('/var/www/FlaskApp/catalog/client_secrets.json', 'r').read())['web']['client_id']
+    open(APP_PATH + 'client_secrets.json', 'r').read())['web']['client_id']
 APPLICATION_NAME = "Restaurant Menu Application"
 
 
